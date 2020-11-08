@@ -11,6 +11,7 @@ int main(int argc, char *argv[]){
 		exit(0);
 	}
 	int num=0;
+	int error = 0;
 	printf("[+] Start Dumb Fuzzing....\n");
 	// Loop 
 	while(num <100){
@@ -41,11 +42,17 @@ int main(int argc, char *argv[]){
 		printf("[+] result: %d/n", result);
 		if( result != 0)
 		{
-			printf("error!\n");break;
+			printf("error!\n");
+			error++;
+			// save input file
+			FILE*fp = fopen(argv[3],"a+");
+			fwrite(buf, sizeof(buf),1,fp);
+			fclose(fp);
 		}else{
 			printf("good\n");
 			num++;
 		}
 	}
-	printf("[+] Fuzzing Done!");
+	printf("[+] Fuzzing Done!\n");
+	printf("[+] error : %d\n",error); 
 }
