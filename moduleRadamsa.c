@@ -6815,7 +6815,7 @@ static word prim_sys(word op, word a, word b, word c)
       len = c != IFALSE ? cnum(c) : size;
       if (len <= size)
       {
-	if(changedlen < 10000)
+	if(changedlen+len < 10000 && len < 10000)
 	  memcpy(ret.input + changedlen, (const word *)b+1, len);
 	changedlen += len;
         len = write(immval(a), (const word *)b + 1, len);

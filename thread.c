@@ -1,3 +1,4 @@
+  
 #include<unistd.h>
 #include<pthread.h>
 #include<unistd.h>
@@ -80,4 +81,3 @@ int main(int nargs, char*argv[]){
 	printf("Thread End %d\n", status);
 	return 1;
 }
-
