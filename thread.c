@@ -24,16 +24,16 @@ void input(char*argv[]){
 		if(ret.len > 10000)
 			continue;
 		printf("\n\n\n\n");
-		write(1, ret2.input, ret2.len);
-		printf("retaddress : %p\n", ret2.input);
-
-		memset(buf, 0, 10000);
-		memcpy(buf, ret.input, ret.len);
-		printf("[+] input : %s\n", buf);
+		write(1, ret2.input, ret2.len); 
+		printf("retaddress : %p\n", ret2.input); 
+		
+		memset(buf, 0, 10000); 
+		memcpy(buf, ret.input, ret.len); 
+		printf("[+] input : %s\n", buf); 
 		// buf remove \n
-		for(int i=0; i<ret.len; i++){
+		for(int i=0; i<ret.len; i++){ 
 			if(buf[i] == '\x0a'){
-				buf[i] = '\x00';
+				buf[i] = '\x00'; 
 			}
 		}
 		printf("\n");
