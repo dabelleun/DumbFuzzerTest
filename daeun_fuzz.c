@@ -1,4 +1,3 @@
-/*daeun_fuzz*/
 #include<unistd.h>
 #include<stdio.h>
 #include<stdlib.h> 
@@ -19,7 +18,7 @@ int main(int argc, char* argv[])
 	while (num < 100) // num이 100미만일 동안 반복
 	{
 		unsigned char cmd[2024]; // 양수 2024바이트 문자형 cmd 배열 생성
-		sprintf(cmd, str); // cmd 문자열에 randomstring.c의 str을 저장
+		sprintf(cmd, random()); // cmd 문자열에 randomstring.c의 str을 저장
 		FILE* stream = popen(cmd, "r"); // 파일포인터 stream ; cmd을 읽기모드로 오픈
 
 		unsigned char buf[1024]; // 양수 1024바이트 문자형 buf 배열 생성
