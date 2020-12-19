@@ -2,7 +2,7 @@
 #include<stdio.h>
 #include<stdlib.h> 
 #include<string.h> 
-#include"random_string.c"
+#include"daeun_random.c"
 
 int main(int argc, char* argv[]) //argc와 argv배열 포인터를 인자로하는 main함수
 {
