@@ -1,4 +1,3 @@
-```c
 #include<unistd.h>
 #include<stdio.h>
 #include<stdlib.h> 
@@ -60,4 +59,3 @@ int main(int argc, char* argv[]) //argc와 argv배열 포인터를 인자로하�
 	printf("[+] Fuzzing Done!\n"); //퍼징끝 출력
 	printf("[+] error : %d\n", error); // 에러개수출력
 }
-```
