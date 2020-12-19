@@ -1,4 +1,3 @@
-```c
 #include<stdio.h>
 #include<stdlib.h> //srand,rand 함수
 #include<time.h>   //time 함수
@@ -24,4 +23,3 @@ int random(void) {
 		} //str배열은 랜덤 data값 만큼 받음.
 	return 0;
 }
-```
